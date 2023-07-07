@@ -1,0 +1,1205 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+:root {
+     /* Color */
+     --Color1: #141F25;
+     --Color2: #E8E8E8;
+     --Color3: rgba(255, 255, 255, 0.90);
+     --Color-font1: #666C89;
+     --Color-font2: #FFB629;
+
+     /* Font-Style */
+     --font1: 'Rubik';
+     --font2: 'Krub';
+
+     /* Font-Size */
+     --font-title-1: 0.875rem;
+     --font-title-2: 2.188rem;
+     --font-title-3: 1.563rem;
+}
+
+html {
+     scroll-behavior: smooth;
+     text-decoration: none;
+     list-style: none;
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     list-style: none;
+}
+
+body {
+     margin: 40px;
+     display: grid;
+     grid-template-areas:
+          'heading'
+          'home'
+          'tentang-one'
+          'tentang-two'
+          'content-tentang'
+          'layanan'
+          'testimoni'
+          'kenapa'
+          'partner'
+          'footer-1'
+          'footer-2'
+     ;
+     grid-template-columns: 1fr;
+     grid-template-rows: 20px 680px 300px 200px 705px 800px 600px 650px 800px 400px;
+}
+
+/* Heading */
+.heading {
+     background-color: var(--Color1);
+     margin: -40px;
+     grid-area: heading;
+     z-index: 100;
+}
+
+.container-heading {
+     margin: 20px 40px;
+     display: flex;
+     justify-content: space-between;
+}
+
+/* Logo */
+.logo-heading {
+     color: var(--Color2);
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 600;
+     text-align: center;
+}
+
+.judul-top {
+     font-size: 1.063rem;
+}
+
+.judul-bawah {
+     font-size: 1.875rem;
+}
+
+/* Content-Heading */
+.content-heading {
+     display: flex;
+     color: var(--Color2);
+     font-size: 14px;
+     font-family: Krub;
+     font-style: normal;
+     font-weight: 500;
+     gap: 40px;
+}
+
+.list-content-heading {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+/* Home */
+.home {
+     grid-area: home;
+     background: url(assets/Photo.png);
+     margin: 40px -40px;
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+/* Header */
+
+/* Sticky */
+.sticky {
+     position: fixed;
+     background-color: rgba(20, 31, 37, 0.8);
+     width: 100%;
+     margin-top: -99.5px;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(9.7px);
+     -webkit-backdrop-filter: blur(9.7px);
+     z-index: 10000;
+}
+
+header {
+     background-color: rgba(20, 31, 37, 0.4);
+     display: flex;
+     justify-content: space-between;
+     color: var(--Color2);
+}
+
+.menu-list-container {
+     display: flex;
+     margin: 15px 0 0 40px;
+     gap: 40px;
+}
+
+.link-list-menu {
+     color: var(--Color2);
+     font-size: 14px;
+     font-family: Krub;
+     font-style: normal;
+     font-weight: 600;
+}
+
+.link-list-menu::after {
+     margin: 10px auto;
+     content: "";
+     background-color: var(--Color-font2);
+     height: 3px;
+     border-radius: 100px;
+     display: block;
+     transition: ease-out 0.2s;
+     width: 0;
+}
+
+.link-list-menu:hover::after {
+     width: 60%;
+}
+
+.sosmed-list-container {
+     display: flex;
+     margin: 15px 40px 0 0;
+     font-size: 16px;
+     gap: 40px;
+}
+
+.sosmed-list-container a{
+     color: var(--Color2);
+     font-size: 20px;
+}
+
+.sosmed-list-container i:hover {
+     color: var(--Color-font2);
+     transition: ease-in-out 0.3s;
+}
+
+/* Content Home */
+.container-content-home {
+     margin: 8% 40px;
+     color: var(--Color2);
+}
+
+.judul-utama-home {
+     color: var(--Color2);
+     font-size: 48px;
+     font-family: var(--font1);
+     font-style: normal;
+     font-weight: 700;
+     margin-bottom: 20px;
+}
+
+.p-txt-home {
+     color: #FFF;
+     font-size: 15px;
+     font-family: Krub;
+     font-style: normal;
+     font-weight: 500;
+     margin-bottom: 30px;
+}
+
+.button-home {
+     border: none;
+     background: linear-gradient(rgba(255, 182, 41, 1), rgba(255, 218, 86, 1), rgba(255, 215, 166, 1));
+     height: 40px;
+     width: 120px;
+     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.link-button-home {
+     color: var(--Color1);
+     font-size: 12px;
+     font-family: Krub;
+     font-style: normal;
+     font-weight: 600;
+     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.button-home:hover {
+     border: 2px solid var(--Color-font2);
+     background: none;
+}
+
+.button-home .link-button-home:hover {
+     color: var(--Color2);
+}
+
+
+/* Tentang */
+.tentang {
+     margin-top: 20px;
+     grid-area: tentang-one;
+     display: grid;
+     grid-template-areas:
+          'leftt'
+          'right';
+     grid-template-rows: 1fr;
+     grid-template-columns: 350px 1fr;
+}
+
+.deskripsi-tentang {
+     grid-area: leftt;
+}
+
+.container-deskripsi-tentang {
+     margin: 12% 20%;
+}
+
+.pelayanan-tentang {
+     background-image: url(assets/Content.svg);
+     background-repeat: no-repeat;
+}
+
+.responsive-tentang {
+     display: none;
+}
+
+/* BG Tentang */
+.tentang-two-bg {
+     margin: 40px -40px;
+     background-image: url(assets/Background-tentang.png);
+     background-size: cover;
+     grid-area: tentang-two;
+     height: 300px;
+}
+
+/* Content Card */
+.content-card {
+     background-color: #FFF;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(9.7px);
+     -webkit-backdrop-filter: blur(9.7px);
+}
+
+.content-card-top {
+     display: grid;
+     grid-template-areas:
+          'tentang-right tentang-left';
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr;
+     margin: 80px 40px;
+}
+
+.sub-text-tentang {
+     margin-bottom: 20px;
+}
+
+.judul-txt-tentang {
+     color: var(--Color1);
+     font-family: Rubik;
+     font-size: 35px;
+     font-style: normal;
+     font-weight: 600;
+     margin-bottom: 15px;
+}
+
+.p-txt-tentang {
+     color: var(--Color-font1);
+     font-family: Krub;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 500;
+     margin-bottom: 15px;
+}
+
+.container-icon-left {
+     gap: 20px;
+     display: flex;
+     align-items: center;
+     margin: 20px 0;
+}
+
+.txt-left-icon {
+     color: var(--Color1);
+     font-family: var(--font1);
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 500;
+}
+
+.content-card-right-top {
+     margin-left: 40px;
+}
+
+.content-card-bottom {
+     margin-top: -40px;
+}
+
+/* Layanan */
+.layanan {
+     margin: 80px -40px;
+     background-image: url(assets/bg-layanan.svg);
+}
+
+.txt-layanan {
+     color: var(--Color1);
+     text-align: center;
+     font-family: var(--font1);
+     font-size: 35px;
+     font-style: normal;
+     font-weight: 600;
+}
+
+.container-card-layanan {
+     display: flex;
+     gap: 5%;
+     margin: 60px;
+     justify-content: center;
+}
+
+.card-layanan {
+     height: 400px;
+     width: 298px;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(9.7px);
+     -webkit-backdrop-filter: blur(9.7px);
+}
+
+.satu {
+     background-image: url(assets/card1.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.dua {
+     background-image: url(assets/card2.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.tiga {
+     background-image: url(assets/card3.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.container-txt-layanan {
+     margin: 110% 10%;
+}
+
+.txt-card-layanan {
+     color: var(--Color2);
+     font-family: var(--font1);
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 500;
+}
+
+.span-txt-layanan {
+     color: var(--Color-font2);
+     font-family: var(--font2);
+     font-size: 12px;
+     font-style: normal;
+     font-weight: 500;
+}
+
+/* Testimoni */
+.txt-testimoni {
+     margin: 0 35px;
+}
+
+.judul-utama-testimoni {
+     margin-top: 20px;
+     font-family: var(--font1);
+     color: var(--Color1);
+     font-size: 35px;
+     font-style: normal;
+     font-weight: 600;
+}
+
+.content-testimoni {
+     display: flex;
+     justify-content: center;
+     margin-top: 40px;
+}
+
+.testimoni-review {
+     height: 400px;
+     width: 600px;
+}
+
+.review-satu {
+     background-image: url(assets/review1.svg);
+     background-repeat: no-repeat;
+}
+
+.review-dua {
+     background-image: url(assets/review2.svg);
+     background-repeat: no-repeat;
+}
+
+/* Keuntungan */
+.keuntungan {
+     background-color: #666C89;
+     display: grid;
+     grid-template-areas:
+          'footage'
+          'text';
+     grid-template-columns: 45% 55%;
+     grid-template-rows: 1fr;
+     margin: 0 -40px;
+}
+
+.footage-keuntungan {
+     background-color: var(--Color1);
+}
+
+.gambar-footage {
+     margin: 160px;
+     position: absolute;
+}
+
+.text-keuntungan {
+     background-color: #F4F4F4;
+     padding: 160px 100px;
+}
+
+.judul-txt-keuntungan{
+     color: var(--Color1);
+     font-family: var(--font1);
+     font-size: 32px;
+     font-style: normal;
+     font-weight: 600;
+     margin-bottom: 15px;
+}
+
+.p-txt-keuntungan{
+     color: var(--Color-font1);
+     font-family: var(--font2);
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 500;
+}
+
+.content-keuntungan{
+     margin-top: 20px;
+}
+
+.top-content-keuntungan{
+     display: flex;
+}
+
+.satu-footage{
+     background-image: url(assets/kontent-top1.svg);
+     height: 80px;
+     width: 200px;
+     background-repeat: no-repeat;
+}
+
+.dua-footage{
+     background-image: url(assets/konten-top2.svg);
+     height: 80px;
+     width: 200px;
+     background-repeat: no-repeat;
+}
+
+.bottom-content-keuntungan{
+     display: flex;
+     margin-top: -20px;
+}
+
+.tiga-footage{
+     background-image: url(assets/konten-top3.svg);
+     height: 80px;
+     width: 200px;
+     background-repeat: no-repeat;
+}
+
+.empat-footage{
+     background-image: url(assets/konten-top4.svg);
+     height: 80px;
+     width: 200px;
+     background-repeat: no-repeat;
+}
+
+/* Partner */
+.txt-partner{
+     margin: 40px auto;
+     text-align: center;
+}
+
+.judul-utama-partner{
+     color: var(--Color1);
+     font-family: var(--font1);
+     font-size: 25px;
+     font-style: normal;
+     font-weight: 600;
+}
+
+.content-partner{
+     margin: 20px 15%;
+}
+
+.satu-partner{
+     display: flex;
+     gap: 60%;
+}
+
+.dua-partner{
+     text-align: center;
+     margin: 20px auto;
+}
+
+.tiga-partner{
+     display: flex;
+     gap: 35%;
+}
+
+/* Footer1 */
+.footer1{
+     background-image: url(assets/bg-footer1.svg);
+     height: 300px;
+     margin: -40px;
+}
+
+.p-txt-footer1, .footer1-txt{
+     margin: 100px 40px 0;
+}
+
+.p-txt-footer1{
+     color: var(--Color-font2);
+     font-family: var(--font1);
+     font-size: 18px;
+     font-style: normal;
+     font-weight: 400;
+}
+
+.footer1-txt{
+     margin-top: 10px;
+     color: var(--Color2);
+     font-family: var(--font1);
+     font-size: 42px;
+     font-weight: 600;
+}
+
+.pisah1{
+     color: var(--Color-font2);
+     text-decoration: underline;
+     font-weight: 800;
+}
+
+.pisah2{
+     text-decoration: underline;
+     font-weight: 800;
+}
+
+/* Footer */
+footer{
+     background-color: var(--Color1);
+     margin: -140px -40px;
+     padding: 40px;
+}
+
+.footer-top{
+     display: flex;
+     gap: 12%;
+}
+
+.judul-footer, .judul-footer-bawah{
+     color: var(--Color2);
+     font-family: var(--font1);
+     font-style: normal;
+     font-weight: 600;
+}
+
+.judul-footer {
+     font-size: 1.063rem;
+}
+
+.judul-footer-bawah {
+     font-size: 1.875rem;
+}
+
+.p-tentang-footer{
+     margin-top: 20px;
+     color: var(--Color2);
+     font-family: var(--font2);
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 151.523%;
+}
+
+.menu-footer-judul{
+     color: var(--Color2);
+     font-family: var(--font1);
+     font-style: normal;
+     font-weight: 600;
+     font-size: 24px;
+}
+
+.p-menu-footer{
+     margin-top: 10px;
+}
+
+.p-menu-footer a:hover{
+     text-decoration: underline;
+}
+
+.link-menu-footer{
+     color: var(--Color2);
+     font-family: var(--font2);
+     font-size: 12px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 250%;
+     opacity: 80%;
+}
+
+.email-footer{
+     display: flex;
+     gap: 10px;
+}
+
+.txt-icon-judul{
+     color: var(--Color2);
+     font-size: 14px;
+     font-family: Krub;
+     font-style: normal;
+     font-weight: 500;
+}
+
+.txt-icon-p{
+     color: var(--Color2);
+     font-size: 14px;
+     font-family: Krub;
+     font-style: normal;
+     font-weight: 500;
+}
+
+.txt-icon-judul:hover{
+     text-decoration: underline;
+}
+
+.txt-icon-p:hover{
+     text-decoration: underline;
+}
+
+.txt-icon-footer{
+     cursor: pointer;
+}
+
+.whatsapp-footer{
+     display: flex;
+     gap: 10px;
+     margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media only screen and (max-width: 760px) {
+     body {
+          margin: 40px;
+          display: grid;
+          grid-template-areas:
+               'heading'
+               'home'
+               'tentang-one'
+               'tentang-two'
+               'layanan'
+               'testimoni'
+               'kenapa'
+               'partner'
+               'footer-1'
+               'footer-2'
+          ;
+          grid-template-columns: 1fr;
+          grid-template-rows: 20px 680px 650px 40px 400px 800px 600px 400px 500px 300px;
+     }
+
+     .sticky {
+          position: fixed;
+          background-color: rgba(20, 31, 37, 0.8);
+          z-index: 1000;
+          width: 100%;
+          margin-top: -98px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(9.7px);
+          -webkit-backdrop-filter: blur(9.7px);
+     }
+
+     /* Heading */
+     .content-heading {
+          display: none;
+     }
+
+     .logo-heading {
+          color: var(--Color2);
+          font-family: Rubik;
+          font-style: normal;
+          font-weight: 600;
+          text-align: left;
+     }
+
+     .judul-top {
+          font-size: 1rem;
+          text-align: left;
+     }
+
+     .judul-bawah {
+          font-size: 1.475rem;
+          text-align: left;
+     }
+
+
+     /* Home */
+     .sosmed-list-container {
+          display: none;
+     }
+
+     .menu-list-container {
+          gap: 14px;
+          margin: 20px auto 0;
+     }
+
+     .link-list-menu {
+          font-size: 12px;
+     }
+
+     /* Content Home */
+     .container-content-home {
+          margin: 14% 40px;
+          color: var(--Color2);
+     }
+
+     .judul-utama-home {
+          color: var(--Color2);
+          font-size: 40px;
+          font-family: var(--font1);
+          font-style: normal;
+          font-weight: 700;
+          margin: 20px 0;
+     }
+
+     .p-txt-home {
+          color: #FFF;
+          font-size: 15px;
+          font-family: Krub;
+          font-style: normal;
+          font-weight: 500;
+          margin-bottom: 30px;
+     }
+
+     .button-home {
+          border: none;
+          background: linear-gradient(rgba(255, 182, 41, 1), rgba(255, 218, 86, 1), rgba(255, 215, 166, 1));
+          height: 40px;
+          width: 120px;
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+     }
+
+     .link-button-home {
+          color: var(--Color1);
+          font-size: 12px;
+          font-family: Krub;
+          font-style: normal;
+          font-weight: 600;
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+     }
+
+     /* Tentang */
+     .tentang {
+          grid-area: tentang-one;
+          display: block;
+          margin-top: -20px;
+     }
+
+     .container-deskripsi-tentang {
+          margin: 6% 0;
+     }
+
+     .pelayanan-tentang {
+          background-image: url(assets/content-responsive.png);
+          background-repeat: no-repeat;
+          z-index: 100;
+          height: 800px;
+          margin: 10px 10px;
+     }
+
+     .tentang-two-bg {
+          display: block;
+          height: 100px;
+          margin-top: -10px;
+     }
+
+     /* Content Card */
+     .content-card {
+          display: block;
+     }
+
+     .content-card-top {
+          margin: 40px;
+     }
+
+     .container-icon-left {
+          gap: 10px;
+          margin-top: 40px;
+     }
+
+     .judul-txt-tentang {
+          font-size: 1.5rem;
+     }
+
+     .p-txt-tentang {
+          font-size: 12px;
+          display: none;
+     }
+
+     .txt-left-icon {
+          font-size: 0.8rem;
+     }
+
+     .content-card-right-top {
+          display: none;
+     }
+
+     .content-card-bottom {
+          display: none;
+     }
+
+     /* Layanan */
+     .layanan {
+          background: none;
+          margin: 15% auto;
+     }
+
+     .txt-layanan {
+          font-size: 0.9rem;
+          text-align: center;
+     }
+
+     .wrapper-layanan-satu {
+          width: 210px;
+          overflow: scroll;
+          margin-top: -10px;
+     }
+
+     .container-card-layanan {
+          width: 1000px;
+     }
+
+     .card-layanan {
+          float: left;
+          margin-left: -20px;
+          width: 400px;
+     }
+
+     .container-txt-layanan {
+          margin-top: 320px;
+     }
+
+     /* Testimoni */
+     .testimoni {
+          margin-top: -180px;
+          display: block;
+     }
+
+     .txt-testimoni{
+          margin-left: -2px;
+     }
+
+     .judul-utama-testimoni {
+          font-size: 24px;
+     }
+
+     .content-testimoni {
+          display: block;
+          justify-content: center;
+          margin-top: 40px;
+     }
+
+     .testimoni-review {
+          height: 400px;
+          width: 98%;
+     }
+
+     .review-satu {
+          background-image: url(assets/Review-responsive1.svg);
+          background-repeat: no-repeat;
+     }
+
+     .review-dua {
+          background-image: url(assets/Review-responsive2.svg);
+          background-repeat: no-repeat;
+          margin-top: -160px;
+     }
+
+     /* Keuntungan */
+     .keuntungan{
+          display: block;
+          margin-top: -140px;
+     }
+
+     .text-keuntungan{
+          height: 300px;
+     }
+
+     .container-txt-keuntungan{
+          margin: -100px -60px 0;
+     }
+
+     .p-txt-keuntungan br{
+          display: none;
+     }
+
+     .judul-txt-keuntungan{
+          font-size: 24px;
+     }
+
+     .p-txt-keuntungan{
+          font-size: 12px;
+     }
+
+     .footage-keuntungan{
+          display: none;
+     }
+
+     .content-keuntungan{
+          margin: 40px -30px;
+     }
+
+     .top-content-keuntungan{
+          display: block;
+     }
+
+     .bottom-content-keuntungan{
+          display: block;
+     }
+
+     .satu-footage{
+          background-image: url(assets/kontent-top1.svg);
+          height: 80px;
+          width: 170px;
+          background-repeat: no-repeat;
+     }
+
+     .dua-footage{
+          background-image: url(assets/konten-top2.svg);
+          height: 80px;
+          width: 180px;
+          background-repeat: no-repeat;
+          margin-top: -20px;
+     }
+
+     .tiga-footage{
+          background-image: url(assets/konten-top3.svg);
+          height: 80px;
+          width: 180px;
+          background-repeat: no-repeat;
+     }
+
+     .empat-footage{
+          background-image: url(assets/konten-top4.svg);
+          height: 80px;
+          width: 180px;
+          background-repeat: no-repeat;
+          margin-top: -20px;
+     }
+
+     /* Partner */
+     .partner{
+          margin: 80px 0;
+     }
+
+     .content-partner{
+          background-image: url(assets/bg-partner.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 220px;
+          height: 210px;
+          margin: 0 -2%;
+     }
+
+     .satu-partner, .dua-partner, .tiga-partner{
+          display: none;
+     }
+
+     /* Footer1 */
+     .p-txt-footer1{
+          color: var(--Color-font2);
+          font-family: var(--font1);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+     }
+
+     .footer1{
+          background-image: url(assets/bg-footer1.svg);
+          height: 200px;
+     }
+     
+     .p-txt-footer1, .footer1-txt{
+          margin: 30px 40px 0;
+     }
+     
+     .footer1-txt{
+          margin-top: 10px;
+          color: var(--Color2);
+          font-family: var(--font1);
+          font-size: 22px;
+          font-weight: 600;
+     }
+     
+     .pisah1{
+          color: var(--Color-font2);
+          text-decoration: underline;
+          font-weight: 800;
+     }
+     
+     .pisah2{
+          text-decoration: underline;
+          font-weight: 800;
+     }
+
+     /* footer */
+     .menu-footer{
+          display: none;
+     }
+
+     .judul-footer{
+          font-size: 9px;
+     }
+
+     .judul-footer-bawah{
+          font-size: 16px;
+     }
+
+     .p-tentang-footer{
+          font-size: 8px;
+     }
+
+     .txt-icon-p{
+          display: none;
+     }
+
+     .txt-icon-judul{
+          margin-top: 10px;
+     }
+}
